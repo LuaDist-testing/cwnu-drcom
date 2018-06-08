@@ -1,15 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "cwnu-drcom"
-version = "0.0.1-1"
+version = "1.0-1"
 -- LuaDist source
 source = {
-  tag = "0.0.1-1",
+  tag = "1.0-1",
   url = "git://github.com/LuaDist-testing/cwnu-drcom.git"
 }
 -- Original source
 -- source = {
 --    url = "git://github.com/leetking/cwnu-drcom.lua",
+--    dir = "cwnu-drcom.lua",
 -- }
 description = {
    summary = "登录西华师范大学校园网",
@@ -17,7 +18,8 @@ description = {
        通过网页认证登录网络，仅供西华师范大学使用(http://cwnu.edu.cn)。
    ]],
    homepage = "http://github.com/leetking/cwnu-drcom.lua",
-   license = "GNU GPL v3"
+   maintainer = "leetking <li_Tking@163.com>",
+   license = "GNU GPL v3",
 }
 dependencies = {
    "lua >= 5.1",
@@ -27,7 +29,13 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-      drcom  = "drcom.lua",
-      config = "config.lua",
+       ["cwnu-drcom.core"] = "src/core.lua",
+       -- TODO 如何让config模块不导出
+       ["cwnu-drcom.config"] = "src/config.lua",
+   },
+   install = {
+       bin = {
+           drcom  = "drcom.lua",
+       },
    },
 }
