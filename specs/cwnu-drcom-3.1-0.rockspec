@@ -1,23 +1,15 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "cwnu-drcom"
-version = "3.0-0"
--- LuaDist source
+version = "3.1-0"
 source = {
-  tag = "3.0-0",
-  url = "git://github.com/LuaDist-testing/cwnu-drcom.git"
+   url = "git://github.com/leetking/cwnu-drcom.lua",
+   dir = "cwnu-drcom.lua",
+   tag = "v3.1",
 }
--- Original source
--- source = {
---    url = "git://github.com/leetking/cwnu-drcom.lua",
---    dir = "cwnu-drcom.lua",
---    tag = "v3.0",
--- }
 description = {
    summary = "登录西华师范大学校园网",
    detailed = [[
        通过网页认证登录网络，仅供西华师范大学使用(http://cwnu.edu.cn)。
-       v3.0 新版本登录
+       v3.1 新版本登录
    ]],
    homepage = "http://github.com/leetking/cwnu-drcom.lua",
    maintainer = "leetking <li_Tking@163.com>",
